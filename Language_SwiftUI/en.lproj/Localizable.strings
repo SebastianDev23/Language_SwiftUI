@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Language_SwiftUI
+
+  Created by Sebastian Klösel on 09.02.22.
+  
+*/
+
+
+"hello" = "Hello, World!";
+"Willkommen" = "Welcome";

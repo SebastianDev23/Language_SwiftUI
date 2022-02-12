@@ -2,20 +2,52 @@
 //  ContentView.swift
 //  Language_SwiftUI
 //
-//  Created by Sebastian Klösel on 09.02.22.
+//  Created by Sebastian Kl
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    
+    
+    @AppStorage("language") var language: String = ""
+    
+    
+    let text: LocalizedStringKey = "Hello"
+    
+    
     var body: some View {
-        Text("Hello, world!")
+        
+        VStack {
+        
+        Text("hello")
+        Text("Willkommen")
+        
+            Button {
+                language = "en"
+            } label: {
+                Text("Change English")
+            }
             .padding()
+            Button {
+                language = "de"
+            } label: {
+                Text("Change Germany")
+            }
+
+        
+        
+        }
+        .environment(\.locale, .init(identifier: language))
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(language: "en")
+       
     }
 }
